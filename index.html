@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corsi Block-Tapping Test</title>
+    <style>
+        #canvas {
+            width: 500px;
+            z-index: 99;
+            height: 500px;
+            position: relative;
+            background-color: black;
+        }
+        #outer-canvas {
+            width: 700px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            position: relative;
+            background-color: black;
+            margin: auto;
+        }
+        .block {
+            width: 100px;
+            height: 100px;
+            background-color: #B5338A;
+            position: absolute;
+            cursor: pointer;
+        }
+        #countdown {
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            font-family: 'Inter', sans-serif;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: yellow; /* Or any color that stands out */
+        }
+        #doneButton{
+            background-color: #4BB543;
+            padding:20px;
+            cursor: pointer;
+            color: white;
+        }
+        #doneButton > p {
+            font-size: 30px;
+            font-family: 'Inter', sans-serif;
+        }
+        #lifes > p{
+            color: white;
+            font-size: 30px;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div id="outer-canvas">
+    <div id="canvas"></div>
+    <div id="lifes" style="position: absolute; top: 10px; left: 10px;">
+    <p style="margin:0;padding:0;">Tries Remaining: 2</p>
+    </div>
+    <div id="countdown"></div>
+    <div id="doneButton" style="position: absolute; bottom: 10px; right: 10px;">
+    <p style="margin:0;padding:0;">DONE</p>
+    </div>
+</div>
+
+
+<script src="corsi.js"></script>
+</body>
+</html>
